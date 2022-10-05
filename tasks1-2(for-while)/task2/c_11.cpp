@@ -1,12 +1,18 @@
 #include <iostream>
-#include <cmath>
+#include <math.h>
 using namespace std;
 
 int main() {
-	int i;
-	cout << "Enter n: ";
-	cin >> i;
-	for (float i=1/3; i>2; i++) {
-		cout << (i+(1/3*i));
-	}
+  int n;
+  cout << "Enter n: ";
+  cin >> n;
+
+  float a = 1;
+  if (n > 2) {
+    for (int i = 1; i <= n; i++)
+    {
+      a = a * (i + (1.0 / (3.0 * i)));
+    }
+    cout << "Result is: " << a;
+  }
 }
