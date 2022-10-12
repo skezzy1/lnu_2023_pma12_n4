@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+	// A start(must be <=b), B the end, H steps
     float a, b, h, y;
     cout << "Enter a, b and h: ";
     cin >> a >> b >> h;
@@ -14,7 +15,7 @@ int main()
     y = max;
     while (x <= b) {
         if (h <= 0) {
-            cout << "Please enter a bigger than null number: ";
+            cout << "Please enter a bigger than null number: " << endl;
             break;
         }
         y = x * sin(x);
@@ -29,6 +30,6 @@ int main()
         x = x + h;
     }
     cout << "Number of negative numbers: " << count << endl;
-    cout << "The maximum value of the function: " << y << endl;
+    cout << "The maximum value of the function: " << max << endl;
     return 0;
 }
