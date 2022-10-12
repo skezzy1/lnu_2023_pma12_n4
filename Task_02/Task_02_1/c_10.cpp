@@ -4,13 +4,12 @@ using namespace std;
 
 int main()
 {
-    float a, b, h;
+    float a, b, h, y;
     cout << "Enter a, b and h: ";
     cin >> a >> b >> h;
     float x = a;
-    float y, sum = 0;
     int count = 0;
-    int n=0;
+    int n = 0;
     float max = 0;
     y = max;
     while (x <= b) {
@@ -20,7 +19,7 @@ int main()
         }
         y = x * sin(x);
         cout << "x = " << x << "; y = " << y << endl;
-        if (y < 0) {
+        if (y < 0.0) {
             count += 1;
             count++;
         }
@@ -29,7 +28,7 @@ int main()
         }
         x = x + h;
     }
-    cout << "count y < 0: " << count << endl;
+    cout << "Number of negative numbers: " << count << endl;
     cout << "The maximum value of the function: " << y << endl;
     return 0;
 }
