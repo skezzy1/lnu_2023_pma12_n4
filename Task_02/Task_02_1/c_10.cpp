@@ -19,15 +19,15 @@ int main()
             break;
         }
         y = x * sin(x);
-        cout << "x = " << x << "; y = " << y << endl;
+        cout << "x = " << x << ";\t y = " << y << "\t\tX*Y"<< x*y <<endl;
         if (y < 0.0) {
             count += 1;
-            count++;
         }
         if (max < y) {
             max = y;
         }
         x = x + h;
+        
     }
     cout << "Number of negative numbers: " << count << endl;
     cout << "The maximum value of the function: " << max << endl;
