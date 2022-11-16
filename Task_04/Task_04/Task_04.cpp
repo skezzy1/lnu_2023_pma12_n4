@@ -1,29 +1,28 @@
-#include <iostream> 
-
+#include <iostream>
 using namespace std;
 
-int main()
-{
-    int n, m;
-    cout << "Enter n:";
+int main(){
+    int n, m = 0;
+    cout << "n = ";
     cin >> n;
-    cout << "Enter m:";
-    cin >> m;
-    int** pArray = new int* [n];
-
+    int** Arr = new int* [n];
+    for (int i = 0; i < n; i++) { 
+        Arr[i] = new int[n]; 
+    }
     for (int i = 0; i < n; i++) {
-        pArray[i] = new int[m];
+        for (int j = 0; j < n; j++)
+            Arr[i][j] = 0;
     }
-
-    //Set values 
-    int element = 0;
-    for (size_t i = 0; i < n; i++)
-    {
-        for (size_t j = 0; j < m; j++)
-        {
-            //pArray[i][j] = element++; 
-            cin >> pArray[i][j];
-            cout << pArray[i][j] << "\t";
-        }
+    for (int i = 0; i < n; i++)  {
+        for (int j = 0; j < n - m; j++)
+            Arr[i][j] = i + j + 1;
+        m++;
     }
+    cout << "Matrix: " << endl;
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++)
+            cout << Arr[i][j] << " ";
+        cout << endl;
+    }
+    return 0;
 }

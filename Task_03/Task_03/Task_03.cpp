@@ -1,9 +1,7 @@
-﻿#include <iostream> 
+#include <iostream> 
 using namespace std;
-//Задано масив цілих чисел, цілі числа m і l (0 ≤ l ≤ m-1). Вивести лише ті елементи масиву, у яких остача від ділення на m дорівнює l.
 int main()
 {
-    setlocale(LC_CTYPE, "ukr");
     int SizeOfMassive;
     cout << "Enter size of massive: ";
     cin >> SizeOfMassive;
@@ -11,9 +9,10 @@ int main()
     cout << "Enter value of massive: ";
     for (int i = 0; i < SizeOfMassive; i++){
         cin >> pArray[i];
+        cout << pArray[i]*pArray[i] << " ";
     }
 
-    int m, l;
+  /*  int m, l;
     cout << "M: ";
     cin >> m;
     cout << "L: ";
@@ -24,7 +23,7 @@ int main()
             if (pArray[i] % m == l) {
                 cout << pArray[i] << " ";
             }
-        }
     }
-    return 0;
+    system("PAUSE");*/
+    return 0;  
 }
