@@ -1,62 +1,31 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-bool check(int n) {
- return n % 5 == 0;
+void CheckOfSquare(int array[], int n, int m) {
+	for (int i = 0; i < n; i++)
+	{
+		if (array[i] == (m * m)) {
+			cout << array[i];
+		}else if (array[i] != (m * m)) {
+			cout << "One of the values do not satisfy the array\n";
+		}else {
+			cout << "Enter correct values\n";
+		}
+	}
 }
-bool check2(int n) {
- bool result;
- result = n % 5 == 0;
- return result;
- 
+int main()
+{
+	int n, m;
+	cout << "Enter array size: \0";
+	cin >> n;
+	cout << "Enter the number: \0";
+	cin >> m;
+	int* array = new int[n];
+	cout << "Enter value of massive: \0";
+	for (int i = 0; i < n; i++)
+	{
+		cin >> array[i];
+	}
+	CheckOfSquare(array, n, m);
+	delete[] array;
+	return 0;
 }
-bool check3(int n) {
- bool result;
- if (n % 5 == 0) {
-  result = true;
-
- }
- else {
-
-  result = false;
- }
- 
- return result;
-
-}
-int Stepin(int a, int b) {
- 
- int result=1;
- for (int i = 1; i <= b; i++) {
-  
-  result = result * a;
-  //cout << "i: " << i << "  result:" << result << endl;
- }
- return result;
-}
-  
-
-int main() {
- Stepin(2, 10);
- int n;
- cin >> n;
- int start;
- start = Stepin(10, n - 1);
- int end;
- end = start * 10 - 1;
- cout << start << " " << end << endl;
- for (int i = 0; i <= end; i++)
- {
-  if (check(i)) {
-  //if(i%5==0){
-
-   cout << i << endl;
-  }
-
- }
-
-
-
-}
-// n=3 від 100 до 1 000-1 
-//n=4 від 1 000 до 10 000-1
-//n=5 від 10 000 до 100 000-1
