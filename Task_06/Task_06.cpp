@@ -1,21 +1,50 @@
-﻿#include <iostream>
-#include <string>
+﻿#include<iostream>
+#include<string>
 using namespace std;
-//Дано послідовність слів, відокремлених пропусками, в кінці крапка. В словах з
-//непарною кількістю символів вилучити середню літеру.
-int main()
-{
-    string s, word;
-    getline(cin, s);
-    for (int i = 0; i < s.size(); i++)
-    {
-        if (s == s.erase(s.length() / 2, 2)) {
-            cout << s << " ";
-        }
-    }
- 
-    cout << s << "\n\n";
 
-    system("pause");
-    return 0;
+void middleErase(string word, int pos){
+	word[pos / 2] = 0;
+	cout << word << endl;
+}
+string wordErase(string str, int pos){
+	return str.erase(0, pos + 1);
+}
+int wordsCount(string str) {
+	int a = 0;
+	for (int i = 0; i < str.length(); i++){
+		if (str[i] == ' ' || str[i] == '.' || str[i] == '!' || str[i] == "?"){
+			a++;
+		}
+	}
+	return a;
+}
+int position(string word) {
+	int a = 0;
+	for (int i = 0; i < word.length(); i++) {
+		if (word[i] != ' ' && word[i] != '.'){
+			a++;
+		}
+		else{
+			break;
+		}
+	}
+	return a;
+}
+
+int main() {
+	string str, word;
+	getline(cin, str);
+	int words_amount = wordsCount(str);
+	for (int i = 0; i < words_amount; i++){
+		word = str;
+		int pos = position(word);
+		word.resize(pos);
+		if (pos % 2 != 0){
+			middleErase(word, pos);
+		}
+		else{
+			cout << word << endl;
+		}
+		str = wordErase(str, pos);
+	}
 }

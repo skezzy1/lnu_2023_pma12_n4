@@ -24,5 +24,7 @@ int main(){
             cout << Arr[i][j] << " ";
         cout << endl;
     }
+    cout << "Min element: " << Arr[0][0] << " " << "Max element: " << n << endl;
+    cout << endl;
     return 0;
 }
