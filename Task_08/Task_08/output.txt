@@ -1,0 +1,10 @@
+List of sportsmen:
+Serhii
+500
+Max
+200
+Ivan
+300
+Ioan
+100
+Winner: Serhii

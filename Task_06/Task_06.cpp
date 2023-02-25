@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 #include<string>
 using namespace std;
 
@@ -12,7 +12,7 @@ string wordErase(string str, int pos){
 int wordsCount(string str) {
 	int a = 0;
 	for (int i = 0; i < str.length(); i++){
-		if (str[i] == ' ' || str[i] == '.' || str[i] == '!' || str[i] == "?"){
+		if (str[i] == ' ' || str[i] == '.'){
 			a++;
 		}
 	}
@@ -30,7 +30,9 @@ int position(string word) {
 	}
 	return a;
 }
-
+string wordErase2(string str, int pos){
+	return str.find(0, pos - 1);
+}
 int main() {
 	string str, word;
 	getline(cin, str);
@@ -47,4 +49,5 @@ int main() {
 		}
 		str = wordErase(str, pos);
 	}
+	cout << str[0] << endl;
 }

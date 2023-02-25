@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 using namespace std;
 struct sportsman {
@@ -46,7 +46,7 @@ void inputGroupOfSportsmen(sportsman*& group, int n) {
 }
 void OutPutGroupOfSportsmen(sportsman* group, int n) {
     cout << endl << "Group" << endl;
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++) {
         cout << "\n";
         cout << "Sportsman number:" << i + 1 << endl;
         OutputSportsmanInfo(group[i]);
@@ -73,6 +73,6 @@ int main()
     cout << "\n";
     TheBestMark(group, n);
     cout << "\n";
-    delete [] group;
+    delete[] group;
     return 0;
 }

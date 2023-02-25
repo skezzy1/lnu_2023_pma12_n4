@@ -1,0 +1,9 @@
+4
+Serhii
+500
+Max
+200
+Ivan
+300
+Ioan
+100
